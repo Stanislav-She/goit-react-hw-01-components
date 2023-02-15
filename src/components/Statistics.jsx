@@ -1,12 +1,12 @@
 import StatisticsModule from '../components/Statistics.module.css';
-// export function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// }
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 export const Statistics = data => {
   const { title, stats } = data;
-  // const itemColor = {
-  //   background: getRandomHexColor(),
-  // };
+
   return (
     <>
       <section className={StatisticsModule.statistics}>
@@ -16,7 +16,7 @@ export const Statistics = data => {
           {stats.map(stat => (
             <li
               key={stat.id}
-              // style={itemColor}
+              style={{ backgroundColor: getRandomHexColor() }}
               className={StatisticsModule.item}
             >
               <span className={StatisticsModule.label}>{stat.label}</span>

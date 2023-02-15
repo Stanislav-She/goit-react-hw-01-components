@@ -1,19 +1,29 @@
+import FriendListModule from '../components/FriendList.module.css';
+
 export const FriendList = data => {
   const { friends } = data;
 
   return (
     <>
-      <ul className="friend-list">
+      <ul className={FriendListModule.friendList}>
         {friends.map(friend => (
-          <li key={friend.id} className="item">
-            <span className="status">{friend.isOnline}</span>
+          <li key={friend.id} className={FriendListModule.item}>
+            <span
+              className={
+                friend.isOnline
+                  ? FriendListModule.statusOnline
+                  : FriendListModule.statusOffline
+              }
+            >
+              {friend.isOnline}
+            </span>
             <img
-              className="avatar"
+              className={FriendListModule.avatar}
               src={friend.avatar}
               alt="User avatar"
               width="48"
             />
-            <p className="name">{friend.name}</p>
+            <p className={FriendListModule.name}>{friend.name}</p>
           </li>
         ))}
       </ul>
