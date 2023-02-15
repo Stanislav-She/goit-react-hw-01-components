@@ -1,4 +1,4 @@
-.statistics {
+.transactionHistory {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,9 @@
   width: auto;
   height: auto;
   margin-top: 50px;
-  padding: 40px 12px;
+  margin-bottom: 50px;
+  padding: 20px 12px;
+  gap: 3px;
 
   border-radius: 10px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -15,39 +17,37 @@
   background-color: #907d7d;
 }
 
-.title {
-  font-size: 25px;
+.column {
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+
+  background: #1d63be;
+
+  font-size: 20px;
   font-weight: 800;
   color: #000000;
 }
 
-.statList {
+.line {
   display: flex;
-  align-items: center;
-
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-
-  width: 80px;
-  height: 60px;
-  border-radius: 10px;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 2px;
 }
 
-.label {
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  background: #acba33;
+
   font-size: 14px;
   font-weight: 750;
   color: #000000;
-}
-
-.percentage {
-  font-size: 25px;
-
-  color: #493737;
 }

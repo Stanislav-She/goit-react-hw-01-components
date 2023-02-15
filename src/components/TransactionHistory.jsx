@@ -1,23 +1,27 @@
+import TransactionHistoryModule from '../components/TransactionHistory.module.css';
+
 export const TransactionHistory = data => {
   const { items } = data;
 
   return (
     <>
-      <table className="transaction-history">
+      <table className={TransactionHistoryModule.transactionHistory}>
         <thead>
           <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+            <th className={TransactionHistoryModule.column}>Type</th>
+            <th className={TransactionHistoryModule.column}>Amount</th>
+            <th className={TransactionHistoryModule.column}>Currency</th>
           </tr>
         </thead>
 
         <tbody>
           {items.map(item => (
-            <tr key={item.id}>
-              <td>{item.type}</td>
-              <td>{item.amount}</td>
-              <td>{item.currency}</td>
+            <tr className={TransactionHistoryModule.line} key={item.id}>
+              <td className={TransactionHistoryModule.value}>{item.type}</td>
+              <td className={TransactionHistoryModule.value}>{item.amount}</td>
+              <td className={TransactionHistoryModule.value}>
+                {item.currency}
+              </td>
             </tr>
           ))}
         </tbody>
